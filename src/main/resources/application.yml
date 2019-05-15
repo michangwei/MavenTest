@@ -1,0 +1,10 @@
+server:
+  port: 80
+spring: 
+    datasource: 
+        url: jdbc:oracle:thin:@10.126.132.9:1521:SRMDB
+        username: srmtest
+        password: srm2016
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+mybatis:
+    mapperLocations: classpath:mapper/*Mapper.xml

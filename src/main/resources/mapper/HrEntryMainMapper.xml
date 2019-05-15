@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mi.dao.HrEntryMainMapper">
+  <resultMap id="BaseResultMap" type="com.mi.vo.HrEntryMain">
+    <id column="FD_ID" jdbcType="VARCHAR" property="fdId" />
+    <result column="FD_NAME" jdbcType="VARCHAR" property="fdName" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    FD_ID, FD_NAME
+  </sql>
+  
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from HR_ENTRY_MAIN
+    where FD_ID = #{fdId,jdbcType=VARCHAR}
+  </select>
+  
+</mapper>
